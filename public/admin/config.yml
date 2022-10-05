@@ -10,7 +10,7 @@ collections:
     files:
     - label: "Galerie"
       name: "galerie"
-      file: "content/gallerie.md"
+      file: "content/galerie.md"
       fields:
         - { label: "Titre", name: "title", widget: "string"}
         - { label: "Corps", name: "corps", widget: "text"}

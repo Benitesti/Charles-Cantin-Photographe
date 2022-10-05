@@ -7,13 +7,13 @@ import styles from "./PictureGrid.module.css"
 
 
 
-const PictureGrid = ({ displayedPictures }) => {
+const PictureGrid = ({ displayedPhotos }) => {
   const [isBlurred, setIsBlurred] = useState(false)
 
 return (
   <div className={styles.container}>
     <div className={styles.grid}>
-        {displayedPictures.map((img, i) => (
+        {displayedPhotos.map((img, i) => (
           <GridImageContainer 
             key={i} 
             img={img}

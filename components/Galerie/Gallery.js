@@ -6,19 +6,19 @@ import PictureGrid from "./PictureGrid"
 import styles from "./Gallery.module.css"
 
 
-const Gallery = ({ pictures }) => {
+const Gallery = ({ photos, titre, corps }) => {
 
   const [categories, setCategories] = useState([])
-  const [picturesFiltered, setPicturesFiltered] = useState([...pictures])   
+  const [photosFiltered, setPhotosFiltered] = useState([...photos])   
 
   useEffect(() => {
     let filtered = []
     if (categories.length > 0) {
-    filtered = pictures.filter((pic) => categories.includes(pic.categories[0]))
+    filtered = photos.filter((pic) => categories.includes(pic.categories[0]))
     } else {
-    filtered = pictures
+    filtered = photos
     }
-    setPicturesFiltered(filtered) 
+    setPhotosFiltered(filtered) 
   }, [categories]) 
 
 
@@ -36,8 +36,12 @@ const Gallery = ({ pictures }) => {
 
   return (
   <div className={styles.Gallery}>
-    <Categories handleCategories={handleCategories} handleReset={() => setPicturesFiltered([...pictures])}/>
-    <PictureGrid displayedPictures={picturesFiltered}/>
+    <div className={styles.galleryText}>
+      <h1>{titre}</h1>
+      <p>{corps}</p>
+    </div>
+    <Categories handleCategories={handleCategories} handleReset={() => setPhotosFiltered([...photos])}/>
+    <PictureGrid displayedPhotos={photosFiltered}/>
   </div>
   )
 }
