@@ -58,7 +58,7 @@
   }
 
   .Menu ul li:hover {
-    background-color: #47555e42;
+    background-color: hsla(203, 14%, 32%, 0.259);
   }
 
 }

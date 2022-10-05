@@ -51,6 +51,7 @@ const Contact = ({ titre, corps }) => {
         </div>                
         <button className={styles.button} type="submit">Envoyer</button>        
       </form>
+      <div className={styles.pictureBottom}/>
     </div>
   )
 }

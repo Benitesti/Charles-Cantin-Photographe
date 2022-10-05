@@ -14,7 +14,7 @@ collections:
       fields:
         - { label: "Titre", name: "title", widget: "string"}
         - { label: "Corps", name: "corps", widget: "text"}
-        - label: "Chotos"
+        - label: "Photos"
           name: "photos"
           widget: "list"
           fields:
