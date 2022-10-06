@@ -5,7 +5,7 @@ import React from "react"
 
 
 
-const Contact = ({ titre, corps }) => {
+const Contact = ({ titre, corps, form }) => {
 
   const [hydrated, setHydrated] = useState(false);
 	  useEffect(() => {
@@ -25,7 +25,8 @@ const Contact = ({ titre, corps }) => {
       <form 
         className={styles.form} 
         name="contact" 
-        method="post"
+        method="POST"
+        // action={form}
         encType="application/x-www-form-urlencoded" 
         data-netlify="true" 
         onSubmit="submit"

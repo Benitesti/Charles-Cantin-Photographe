@@ -42,6 +42,7 @@ collections:
       fields: 
         - { label: "Titre", name: "titre", widget: "string"}
         - { label: "Corps", name: "corps", widget: "text"}
+        - { label: "Adresse du formulaire", name: "form", widget: "string"}
     - label: "Prestations"
       name: "prestations"
       file: "content/prestations.md"

@@ -6,7 +6,6 @@ import { motion } from "framer-motion"
 import styles from "./GridImageContainer.module.css"
 
 
-
 const GridImageContainer = ({ img, blur, setBlur }) => {
 
   const [windowSize, setWindowSize] = useState(0)
@@ -17,12 +16,11 @@ const GridImageContainer = ({ img, blur, setBlur }) => {
 
   const variants = 
   { expanded: {
-                                                      // windowSize / 350 ?
       scale: 
         windowSize < 480 ? 1 : 
         windowSize < 820 ? 1.5 : 
         windowSize < 1200 ? 2 : 2.5, 
-      zIndex: 1000
+      zIndex: 1000,
     },
     normal: { scale: 1 },
     hover: { scale: 0.9 },
